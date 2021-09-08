@@ -1,0 +1,19 @@
+form {
+    padding: 20px 15px;
+    background-color: #d9eee1;
+    border-radius: 10px;
+    box-shadow: 1px 3px gray;
+    width: 80%;
+    border: 1px solid rgba(150, 150, 150, 0.5)
+}
+
+form button {
+    width: 80%;
+}
+
+form a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+}
