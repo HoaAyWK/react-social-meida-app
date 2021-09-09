@@ -1,4 +1,4 @@
-form {
+.cover {
     padding: 20px 15px;
     background-color: #d9eee1;
     border-radius: 10px;
@@ -7,11 +7,11 @@ form {
     border: 1px solid rgba(150, 150, 150, 0.5)
 }
 
-form button {
+.cover button {
     width: 80%;
 }
 
-form a {
+.cover a {
     color: white;
     text-decoration: none;
     padding: 5px;
