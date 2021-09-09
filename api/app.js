@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const cors = require('cors');
+const multer = require('multer');
 
 const authRoute = require('./routes/auth');
 const postRoute = require('./routes/post');

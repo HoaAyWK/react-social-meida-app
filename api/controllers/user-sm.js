@@ -22,7 +22,7 @@ module.exports.createNewUser = async (req, res) => {
                 password: hashedPassword
             });
             const saveUser = await user.save();
-            res.status(201).json({message: 'Create user successful'});
+            res.status(201).json(user);
         }
     } catch(err) {
         res.status(500).json({error: err.message});
@@ -48,7 +48,16 @@ module.exports.postSignin = async (req, res) => {
         {
             expiresIn: '2h'
         });       
-        res.status(200).json({message: 'Auth successful', token});
+        res.status(200).json({user: {
+            _id: user._id,
+            email: user.email,
+            profilePicture: user.profilePicture,
+            coverPicture: user.coverPicture,
+            followers: user.followers,
+            followings: user.followings,
+            city: user.city,
+            description: user.description
+        }, token});
     } catch(err) {
         res.status(500).json({error: err.message});
     }
